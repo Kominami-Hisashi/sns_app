@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   
   #PostsController
-  get'post/new',to:'posts#new',as:'new_post'
+  get'posts/new',to:'posts#new',as:'new_post'
   
   #TopicsController
   get'topics/new',to:'topics#new',as:'new_topics'
