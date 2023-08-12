@@ -4,13 +4,17 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  get '/',to: 'posts#index',as: 'index_post'
   
   #PostsController
   get 'posts/new',to: 'posts#new',as: 'new_post'
-  
-  get '/',to: 'posts#index',as: 'index_post'
-  
   post 'posts/new',to: 'posts#create',as: 'create_post'
+  
+  #edit追加
+  get 'posts/edit/:id',to: 'posts#edit', as: 'edit_post'
+  post 'posts/edit/:id',to: 'posts#update', as: 'update_post'
+  
+  delete 'posts/destroy/:id', to: 'posts#destroy', as: 'destroy_post'
   
   #TopicsController
   get 'topics/new',to: 'topics#new',as: 'new_topic'
@@ -22,5 +26,7 @@ Rails.application.routes.draw do
   post 'topics/edit/:id',to: 'topics#update', as: 'update_topic'
   
   get 'topics/',to: 'topics#index',as: 'index_topic'
+  
+  delete 'topics/destroy/:id', to: 'topics#destroy', as: 'destroy_topic'
   
 end

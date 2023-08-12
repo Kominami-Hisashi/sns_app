@@ -1,9 +1,9 @@
 <div class="post-list">
   <% @topics.each do |topic| %>
-    <div class="post">
+    <a class="post" href="<%= edit_topic_path(topic) %>" >
       <div class="header">
         <h2 class="title"><%= topic.title %></h2>
     </div>
-  </div>
+  </a>
   <% end %>
 </div>
