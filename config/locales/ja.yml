@@ -16,6 +16,9 @@ ja:
       
       topic:
         title: 'タイトル'
+      
+      comment:
+        content: 'コメント'
 
   date:
     abbr_day_names:
